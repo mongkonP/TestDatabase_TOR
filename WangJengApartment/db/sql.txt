@@ -1,0 +1,108 @@
+﻿ข้อมูลพนักงำน/tblEmp
+NO.  Name  Description  Type  Key  Reference
+1  Id_officer  หมายเลขพนักงาน  Numeric(10,5)  PK 
+2  F_Name  ชื่อ  Verchar (50)   
+3  L_Name  นามสกุล  Verchar (50)   
+4  Address  ที่อยู่   Verchar (20)   
+5  Tel  โทรศัพท์   Verchar (20)   
+6  Salary  เงินเดือน  Numeric(10,5)   
+7  Username  Username  Verchar (50)   
+8  Password  Password  Verchar (50)   
+9  Stetus  สถานะ  Verchar (50) 
+
+CREATE TABLE tblEmp (
+    Id_officer NUMERIC(10, 5) PRIMARY KEY,
+    F_Name VARCHAR(50),
+    L_Name VARCHAR(50),
+    Card  VARCHAR(20),
+    Address VARCHAR(20),
+    Tel VARCHAR(20),
+    Salary NUMERIC(10, 5),
+    Username VARCHAR(50),
+    Password VARCHAR(50),
+    Stetus VARCHAR(50)
+);
+
+
+ข้อมูลลูกค้ำ/tblCus
+NO.  Name  Description  Type  Key  Reference
+1  Id_Customer  หมายเลขลูกค้าNumeric(10,5)  PK 
+2  F_name  ชื่อ  Verchar (50)   
+3  L_name  นามสกุล  Verchar (50)   
+4  Card  บัตรประชาชน  Verchar (20)   
+5  Address  ที่อยู่   Verchar (20)   
+6  Faith  ศาสนา  Verchar (20)   
+7  Nationality  สัญชาติ   Verchar (50)   
+8  Occupation  อาชีพ  Verchar (20)   
+9  Birthday  วันเกิด  Verchar (50)   
+10  Tel  โทรศัพท์   Verchar (50)
+
+CREATE TABLE tblCus (
+    Id_Customer NUMERIC(10, 5) PRIMARY KEY,
+    F_Name VARCHAR(50),
+    L_Name VARCHAR(50),
+    Card  VARCHAR(20),
+    Address VARCHAR(20),
+    Tel VARCHAR(20),
+    Birthday  VARCHAR(20),
+    Faith  VARCHAR(20),
+    Nationality  VARCHAR(20),
+    Occupation  VARCHAR(20)
+);
+
+
+ใบเสรํจรับเงิน/tblBill
+50
+NO.  Name  Description  Type  Key  Reference
+1  N_Bill  หมายเลขใบเสร็จ  Numeric(10,5)  PK 
+2  ID_no  หมายเลขใบแจ้งหนี้  Numeric(10,5)   
+3  Date  วัน เดือน ปี   Date time(8)   
+4  Total  ยอดเงิน  Numeric(10,5)   
+5  N_statement  หมายเลขใบแจ้งหนี้  Verchar (50) 
+
+ข้อมูลห้อง/tblRoom
+NO.  Name  Description  Type  Key  Reference
+1  N_Room  รหัสห้องพัก  Numeric(10,5)  PK 
+2  Number_ room  หมายเลขห้อง  Numeric(10,5)   
+3  Price_Room  รายการของเบิก  Numeric(10,5)   
+4  Status  สถานะ  Numeric(10,5) 
+ตำรำงที่ 4.5 ส ั ญญำเช่ ำ
+NO.  Name  Description  Type  Key  Reference
+1  N_Rent  หมายเลขสัญญาเช่า  Numeric(10,5)  PK 
+2  Money_insurance  เงินค่ามัดจ า  Number(10,5)   
+3  Start_Rcontract  วันท าสัญญา  Verchar (50)   
+4  End_Rcontract  วันสิ้นสุดสัญญา  Date time( 8)   
+5  Date  วันที่   Date time( 8)   
+6  Price_Panalty  ค่ามัดจ า  Numeric(10,5)   
+7  Out_date  วันที่ออก  Date time( 8)   
+8  ID_Office  หมายเลขพนักงาน  Verchar (50)   
+9  N_Room  หมายเลขห้อง  Verchar (50)   
+10  Id_Customer  หมายเลขลูกค้า  Numeric(10,5)
+
+ตำรำงที่ 4.6 ใบแจ้งหนี้
+NO.  Name  Description  Type  Key  Reference
+1  ID_no  หมายเลขใบแจ้งหนี้   Numeric(10,5)  PK 
+2  Stetus  สถานะ  Verchar (20)   
+3  Note  หมายเหตุ   Numeric(10,5)   
+4  ID_rent  หมายเลขสัญญาเช่า  Numeric(10,5)   
+5  Date  วัน เดือน ปี   Datetime( 8)   
+6  Deadtime  ก าหนดจ่าย  Datetime( 8)   
+8  N_Room  หมายเลขห้อง  Numeric(10,5)   
+9  Id_Officer  หมายเลขพนักงาน  Numeric(10,5) 
+ตำรำงที่ 4.7 รำยละเอียดใบแจ้งหนี้
+NO.  Name  Description  Type  Key  Reference
+1  ID_Code  รหัสID  Numeric(10,5)  PK 
+2  Name_Costs  ชื่อค่าใช้จ่าย  Verchar (20)   
+3  Price  ราคา  Numeric(10,5)   
+4  Unit  หน่ วย  Numeric(10,5)   
+5  Date  วัน เดือน ปี   Datetime( 8)   
+6  Penalty  ปรับ  Numeric(10,5)   
+7  Other  อื่น  Verchar (20)   
+8  Total  ยอดเงิน  Numeric(10,5)   
+9  Deadtime  ก าหนดจ่าย  Datetime( 8)   
+10  Discount  ส่วนลด  Numeric(10,5) 
+ตั วอย่ ำงข้ อมู ลตำรำงที ่  4.10 ข้อมูลห้อง
+N_Room  Number_room  Price_Room  Stetus
+R101  1011  1800  ว่าง
+R102  1012  1800  ไม่ว่าง
+
