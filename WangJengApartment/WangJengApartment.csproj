@@ -61,14 +61,52 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="db\DB.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DB.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="frm\frmCus.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm\frmCus.Designer.cs">
+      <DependentUpon>frmCus.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm\frmEmpAll.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm\frmEmpAll.Designer.cs">
+      <DependentUpon>frmEmpAll.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm\frmEmpDetail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm\frmEmpDetail.Designer.cs">
+      <DependentUpon>frmEmpDetail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm\frmLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm\frmLogin.Designer.cs">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+    </Compile>
     <Compile Include="frm\frmMain.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frm\frmMain.Designer.cs">
       <DependentUpon>frmMain.cs</DependentUpon>
     </Compile>
+    <Compile Include="frm\frmRoom.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm\frmRoom.Designer.cs">
+      <DependentUpon>frmRoom.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="frm\frmRoom.resx">
+      <DependentUpon>frmRoom.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -78,6 +116,17 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <None Include="db\DB.xsc">
+      <DependentUpon>DB.xsd</DependentUpon>
+    </None>
+    <None Include="db\DB.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DB.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="db\DB.xss">
+      <DependentUpon>DB.xsd</DependentUpon>
+    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -92,6 +141,12 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="db\CreateTable - Copy.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="db\CreateTable.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="db\DATA_APM.mdf">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
@@ -99,7 +154,6 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       <DependentUpon>DATA_APM.mdf</DependentUpon>
     </Content>
-    <Content Include="db\sql.txt" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="cls\" />

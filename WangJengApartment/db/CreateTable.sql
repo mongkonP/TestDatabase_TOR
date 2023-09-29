@@ -9,7 +9,10 @@ CREATE TABLE tblEmp (
     Salary NUMERIC(10, 5),/* เงินเดือน */
     Username VARCHAR(50),/* Username*/
     Password VARCHAR(50),/*Password */
-    Stetus VARCHAR(50)/*สถานะ*/
+    Stetus VARCHAR(50),/*สถานะ*/
+    Picture VARCHAR(50), /*รูป*/
+    Admin BIT/*สถานะ แอดมิน*/
+    
 );
 
 --ข้อมูลลูกค้า/tblCus
@@ -23,7 +26,10 @@ CREATE TABLE tblCus (
     Birthday  VARCHAR(20),/*วันเกิด*/
     Faith  VARCHAR(20),/*ศาสนา*/
     Nationality  VARCHAR(20),/*สัญชาติ*/
-    Occupation  VARCHAR(20)/*อาชีพ*/
+    Occupation  VARCHAR(20),/*อาชีพ*/
+    Picture VARCHAR(50), /*รูป*/
+    CarID VARCHAR(50), /*ทะเบียนรถ*/
+    CarPicture VARCHAR(50) /*รูปรถ*/
 );
 
 --ข้อมูลห้อง/tblRoom

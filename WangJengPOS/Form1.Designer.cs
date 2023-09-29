@@ -1,4 +1,4 @@
-﻿namespace WangJengCarCare
+﻿namespace WangJengPOS
 {
     partial class Form1
     {
