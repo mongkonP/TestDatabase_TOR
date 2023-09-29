@@ -1,4 +1,4 @@
-﻿namespace DB_User
+﻿namespace DB_Student
 {
     partial class Form1
     {

@@ -1,11 +1,10 @@
-﻿using DB_User.frm;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace DB_User
+namespace DB_Student
 {
     internal static class Program
     {
@@ -17,7 +16,7 @@ namespace DB_User
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frmEmpAll());
+            Application.Run(new Form1());
         }
     }
 }
