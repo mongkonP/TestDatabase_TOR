@@ -59,12 +59,36 @@
     <Reference Include="System.Net.Http" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
+    <Reference Include="TORServices.DB">
+      <HintPath>..\..\..\TestControlLibrary\TORServices\File DLL\TORServices.DB.dll</HintPath>
+    </Reference>
+    <Reference Include="TORServices.Drawings">
+      <HintPath>..\..\..\TestControlLibrary\TORServices\File DLL\TORServices.Drawings.dll</HintPath>
+    </Reference>
+    <Reference Include="TORServices.Forms">
+      <HintPath>..\..\..\TestControlLibrary\TORServices\File DLL\TORServices.Forms.dll</HintPath>
+    </Reference>
+    <Reference Include="TORServices.Maths">
+      <HintPath>..\..\..\TestControlLibrary\TORServices\File DLL\TORServices.Maths.dll</HintPath>
+    </Reference>
+    <Reference Include="TORServices.Network">
+      <HintPath>..\..\..\TestControlLibrary\TORServices\File DLL\TORServices.Network.dll</HintPath>
+    </Reference>
+    <Reference Include="TORServices.PathFile">
+      <HintPath>..\..\..\TestControlLibrary\TORServices\File DLL\TORServices.PathFile.dll</HintPath>
+    </Reference>
+    <Reference Include="TORServices.Systems">
+      <HintPath>..\..\..\TestControlLibrary\TORServices\File DLL\TORServices.Systems.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="db\DS_User.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>DS_User.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="frm\frmLogin.cs">
+      <SubType>Form</SubType>
     </Compile>
     <Compile Include="frm\frmEmpAll.cs">
       <SubType>Form</SubType>
@@ -83,6 +107,12 @@
     <EmbeddedResource Include="frm\frmEmpAll.resx">
       <DependentUpon>frmEmpAll.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frm\frmEmpDetail.resx">
+      <DependentUpon>frmEmpDetail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm\frmLogin.resx">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -91,6 +121,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="db\DS_User.xsc">
       <DependentUpon>DS_User.xsd</DependentUpon>
@@ -118,6 +149,9 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="cls\" />
+    <Folder Include="Files\Book\" />
+    <Folder Include="Files\Pic\" />
+    <Folder Include="Resources\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="db\CreateDB.sql">

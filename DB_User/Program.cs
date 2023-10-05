@@ -17,7 +17,7 @@ namespace DB_User
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frmEmpAll());
+            Application.Run(new frmLogin());
         }
     }
 }

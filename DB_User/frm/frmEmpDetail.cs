@@ -7,14 +7,40 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using TORServices.Forms.Ext;
+using TORServices.Forms.FormsDatabase;
 
 namespace DB_User.frm
 {
-    public partial class frmEmpDetail : Form
+    public partial class frmEmpDetail : frmDatagrid_Detail
     {
-        public frmEmpDetail()
+        int empID;
+        public frmEmpDetail(int id = 0)
         {
             InitializeComponent();
+            empID = id;
+        }
+
+
+        private void frmEmpDetail_Load(object sender, EventArgs e)
+        {
+            // TODO: This line of code loads data into the 'dS_User.tblEmp' table. You can move, or remove it, as needed.
+            this.tblEmpTableAdapter.Fill(this.dS_User.tblEmp);
+            if (empID <= 0)
+            {
+                this.tblEmpBindingSource.AddNew();
+            }
+            else
+            {
+                this.tblEmpTableAdapter.FillByEmpID(this.dS_User.tblEmp,empID);
+            }
+        }
+
+        private void cmdSave_Click(object sender, EventArgs e)
+        {
+            this.Validate();
+            this.tblEmpBindingSource.EndEdit();
+            this.tableAdapterManager.UpdateAll(this.dS_User);
         }
     }
 }
