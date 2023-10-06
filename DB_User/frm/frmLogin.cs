@@ -60,6 +60,10 @@ namespace DB_User.frm
             // 
             this.pic_01.Location = new System.Drawing.Point(12, 91);
             // 
+            // cmdSubmit
+            // 
+            this.cmdSubmit.Click += new System.EventHandler(this.cmdSubmit_Click);
+            // 
             // tblEmpDataGridView
             // 
             this.tblEmpDataGridView.AllowUserToAddRows = false;
@@ -252,9 +256,9 @@ namespace DB_User.frm
             if (tblEmpDataGridView.RowCount > 0)
             {
                 MessageBox.Show("ยินดีต้อนรับคุณ:\n\n" + tblEmpDataGridView[1, 0].Value.ToString() + " " + tblEmpDataGridView[2, 0].Value.ToString());
-               new frmEmpDetail((int)tblEmpDataGridView[0, 0].Value).ShowDialog();
+                new frmEmpDetail((int)tblEmpDataGridView[0, 0].Value).ShowDialog();
                     this.Close();
-                }
+          }
             else
             {
                 MessageBox.Show("User name หรือ User pass ผิดพลาด" + Environment.NewLine + "กรุณาระบุใหม่อีกครั้ง");
@@ -264,6 +268,9 @@ namespace DB_User.frm
 
         }
 
-     
+        private void cmdSubmit_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

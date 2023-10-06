@@ -30,10 +30,10 @@ namespace DB_User.frm
         }
         void InsertTestData()
         {
-           // tblEmpTableAdapter.Insert(1, "Admin", "Admin", null, null, null, null, "ADMIN", "ADMIN", null, null, true);
-            tblEmpTableAdapter.Insert(2, "EMP 001", "EMP 001", null, null, null, null, "ADMIN01", "ADMIN", null, null, true);
-            tblEmpTableAdapter.Insert(3, "EMP 002", "EMP 002", null, null, null, null, "EMP 002", "EMP 002", null, null, true);
-            tblEmpTableAdapter.Insert(4, "EMP 003", "EMP 003", null, null, null, null, "EMP 003", "EMP 003", null, null, false);
+            tblEmpTableAdapter.Insert( "Admin", "Admin", null, null, null, null, "ADMIN", "ADMIN", null, null, true);
+            tblEmpTableAdapter.Insert( "EMP 001", "EMP 001", null, null, null, null, "ADMIN01", "ADMIN", null, null, true);
+            tblEmpTableAdapter.Insert( "EMP 002", "EMP 002", null, null, null, null, "EMP 002", "EMP 002", null, null, true);
+            tblEmpTableAdapter.Insert( "EMP 003", "EMP 003", null, null, null, null, "EMP 003", "EMP 003", null, null, false);
 
         }
         private void frmEmpAll_Load(object sender, EventArgs e)

@@ -74,7 +74,6 @@
             this.dataGridViewCheckBoxColumn1 = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.panel1 = new System.Windows.Forms.Panel();
             this.adminCheckBox = new System.Windows.Forms.CheckBox();
-            this.pictureTextBox = new TORServices.Forms.Forms.PictureboxOpenPath();
             this.stetusTextBox = new System.Windows.Forms.TextBox();
             this.passwordTextBox = new System.Windows.Forms.TextBox();
             this.usernameTextBox = new System.Windows.Forms.TextBox();
@@ -85,6 +84,7 @@
             this.l_NameTextBox = new System.Windows.Forms.TextBox();
             this.f_NameTextBox = new System.Windows.Forms.TextBox();
             this.id_officerTextBox = new System.Windows.Forms.TextBox();
+            this.pictureTextBox = new TORServices.Forms.Forms.PictureboxOpenPath();
             id_officerLabel = new System.Windows.Forms.Label();
             f_NameLabel = new System.Windows.Forms.Label();
             l_NameLabel = new System.Windows.Forms.Label();
@@ -208,7 +208,7 @@
             // pictureLabel
             // 
             pictureLabel.AutoSize = true;
-            pictureLabel.Location = new System.Drawing.Point(742, 500);
+            pictureLabel.Location = new System.Drawing.Point(826, 388);
             pictureLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             pictureLabel.Name = "pictureLabel";
             pictureLabel.Size = new System.Drawing.Size(62, 20);
@@ -401,6 +401,7 @@
             this.dataGridViewTextBoxColumn1.DataPropertyName = "Id_officer";
             this.dataGridViewTextBoxColumn1.HeaderText = "Id_officer";
             this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            this.dataGridViewTextBoxColumn1.ReadOnly = true;
             // 
             // dataGridViewTextBoxColumn2
             // 
@@ -470,10 +471,10 @@
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.pictureTextBox);
             this.panel1.Controls.Add(adminLabel);
             this.panel1.Controls.Add(this.adminCheckBox);
             this.panel1.Controls.Add(pictureLabel);
-            this.panel1.Controls.Add(this.pictureTextBox);
             this.panel1.Controls.Add(stetusLabel);
             this.panel1.Controls.Add(this.stetusTextBox);
             this.panel1.Controls.Add(passwordLabel);
@@ -510,20 +511,6 @@
             this.adminCheckBox.Size = new System.Drawing.Size(156, 37);
             this.adminCheckBox.TabIndex = 23;
             this.adminCheckBox.UseVisualStyleBackColor = true;
-            // 
-            // pictureTextBox
-            // 
-            this.pictureTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.tblEmpBindingSource, "Picture", true));
-            this.pictureTextBox.Image = null;
-            this.pictureTextBox.ImageButton = ((System.Drawing.Image)(resources.GetObject("pictureTextBox.ImageButton")));
-            this.pictureTextBox.Location = new System.Drawing.Point(816, 5);
-            this.pictureTextBox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.pictureTextBox.Name = "pictureTextBox";
-            this.pictureTextBox.Size = new System.Drawing.Size(570, 515);
-            this.pictureTextBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.pictureTextBox.SubDirectory = null;
-            this.pictureTextBox.TabIndex = 21;
-            this.pictureTextBox.Load += new System.EventHandler(this.pictureTextBox_Load);
             // 
             // stetusTextBox
             // 
@@ -616,6 +603,19 @@
             this.id_officerTextBox.Size = new System.Drawing.Size(148, 26);
             this.id_officerTextBox.TabIndex = 1;
             // 
+            // pictureTextBox
+            // 
+            this.pictureTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.tblEmpBindingSource, "Picture", true));
+            this.pictureTextBox.Directory = "Files\\Pic";
+            this.pictureTextBox.Image = null;
+            this.pictureTextBox.ImageButton = ((System.Drawing.Image)(resources.GetObject("pictureTextBox.ImageButton")));
+            this.pictureTextBox.Location = new System.Drawing.Point(896, 28);
+            this.pictureTextBox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.pictureTextBox.Name = "pictureTextBox";
+            this.pictureTextBox.Size = new System.Drawing.Size(478, 380);
+            this.pictureTextBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.pictureTextBox.TabIndex = 94;
+            // 
             // frmEmpAll
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -624,7 +624,7 @@
             this.Controls.Add(this.tblEmpDataGridView);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.tblEmpBindingNavigator);
-            this.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.Margin = new System.Windows.Forms.Padding(6);
             this.Name = "frmEmpAll";
             this.Text = "frmEmpAll";
             this.Load += new System.EventHandler(this.frmEmpAll_Load);
@@ -674,7 +674,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn11;
         private System.Windows.Forms.DataGridViewCheckBoxColumn dataGridViewCheckBoxColumn1;
         private System.Windows.Forms.Panel panel1;
-        private TORServices.Forms.Forms.PictureboxOpenPath pictureTextBox;
         private System.Windows.Forms.TextBox stetusTextBox;
         private System.Windows.Forms.TextBox passwordTextBox;
         private System.Windows.Forms.TextBox usernameTextBox;
@@ -686,5 +685,6 @@
         private System.Windows.Forms.TextBox f_NameTextBox;
         private System.Windows.Forms.TextBox id_officerTextBox;
         private System.Windows.Forms.CheckBox adminCheckBox;
+        private TORServices.Forms.Forms.PictureboxOpenPath pictureTextBox;
     }
 }

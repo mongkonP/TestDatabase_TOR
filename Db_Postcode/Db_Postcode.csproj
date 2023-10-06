@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{A26D8FBB-E4CE-462E-8CDE-77A76193C82D}</ProjectGuid>
+    <ProjectGuid>{A2A33CCC-B7B9-478C-AD1A-853BC5CBC754}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <RootNamespace>DB_User</RootNamespace>
-    <AssemblyName>DB_User</AssemblyName>
+    <RootNamespace>Db_Postcode</RootNamespace>
+    <AssemblyName>Db_Postcode</AssemblyName>
     <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -48,7 +48,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="System" />
+    <Reference Include="System">
+      <HintPath>C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.8\System.dll</HintPath>
+    </Reference>
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -82,37 +84,33 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="db\DS_User.Designer.cs">
+    <Compile Include="db\DS_Postcode.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>DS_User.xsd</DependentUpon>
+      <DependentUpon>DS_Postcode.xsd</DependentUpon>
     </Compile>
-    <Compile Include="Files\Pic\Class1.cs" />
-    <Compile Include="frm\frmLogin.cs">
+    <Compile Include="frm\frmAmp.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frm\frmEmpAll.cs">
+    <Compile Include="frm\frmMain.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frm\frmEmpAll.Designer.cs">
-      <DependentUpon>frmEmpAll.cs</DependentUpon>
+    <Compile Include="frm\frmMain.Designer.cs">
+      <DependentUpon>frmMain.cs</DependentUpon>
     </Compile>
-    <Compile Include="frm\frmEmpDetail.cs">
+    <Compile Include="frm\frmPO.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frm\frmEmpDetail.Designer.cs">
-      <DependentUpon>frmEmpDetail.cs</DependentUpon>
+    <Compile Include="frm\frmPV.cs">
+      <SubType>Form</SubType>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="frm\frmEmpAll.resx">
-      <DependentUpon>frmEmpAll.cs</DependentUpon>
+    <EmbeddedResource Include="frm\frmAmp.resx">
+      <DependentUpon>frmAmp.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frm\frmEmpDetail.resx">
-      <DependentUpon>frmEmpDetail.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="frm\frmLogin.resx">
-      <DependentUpon>frmLogin.cs</DependentUpon>
+    <EmbeddedResource Include="frm\frmMain.resx">
+      <DependentUpon>frmMain.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -122,18 +120,17 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
-      <DesignTime>True</DesignTime>
     </Compile>
-    <None Include="db\DS_User.xsc">
-      <DependentUpon>DS_User.xsd</DependentUpon>
+    <None Include="db\DS_Postcode.xsc">
+      <DependentUpon>DS_Postcode.xsd</DependentUpon>
     </None>
-    <None Include="db\DS_User.xsd">
+    <None Include="db\DS_Postcode.xsd">
       <SubType>Designer</SubType>
       <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>DS_User.Designer.cs</LastGenOutput>
+      <LastGenOutput>DS_Postcode.Designer.cs</LastGenOutput>
     </None>
-    <None Include="db\DS_User.xss">
-      <DependentUpon>DS_User.xsd</DependentUpon>
+    <None Include="db\DS_Postcode.xss">
+      <DependentUpon>DS_Postcode.xsd</DependentUpon>
     </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -150,20 +147,17 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="cls\" />
-    <Folder Include="Files\Book\" />
-    <Folder Include="Resources\" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="db\CreateDB.sql">
+    <Content Include="db\2023-10-06_15-41-49.png" />
+    <Content Include="db\dbPostcode.mdf">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="db\DBUser.mdf">
+    <Content Include="db\dbPostcode_log.ldf">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <DependentUpon>dbPostcode.mdf</DependentUpon>
     </Content>
-    <Content Include="db\DBUser_log.ldf">
-      <DependentUpon>DBUser.mdf</DependentUpon>
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
+    <Content Include="db\script.sql" />
   </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include=".NETFramework,Version=v4.8">

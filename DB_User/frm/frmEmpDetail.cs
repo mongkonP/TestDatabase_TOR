@@ -41,6 +41,7 @@ namespace DB_User.frm
             this.Validate();
             this.tblEmpBindingSource.EndEdit();
             this.tableAdapterManager.UpdateAll(this.dS_User);
+            this.cmdSaveClick();
         }
     }
 }

@@ -43,8 +43,6 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmEmpDetail));
             this.dS_User = new DB_User.db.DS_User();
             this.tblEmpBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.tblEmpTableAdapter = new DB_User.db.DS_UserTableAdapters.tblEmpTableAdapter();
-            this.tableAdapterManager = new DB_User.db.DS_UserTableAdapters.TableAdapterManager();
             this.f_NameTextBox = new System.Windows.Forms.TextBox();
             this.l_NameTextBox = new System.Windows.Forms.TextBox();
             this.cardTextBox = new System.Windows.Forms.TextBox();
@@ -56,6 +54,8 @@
             this.stetusTextBox = new System.Windows.Forms.TextBox();
             this.pictureTextBox = new TORServices.Forms.Forms.PictureboxOpenPath();
             this.adminCheckBox = new System.Windows.Forms.CheckBox();
+            this.tblEmpTableAdapter = new DB_User.db.DS_UserTableAdapters.tblEmpTableAdapter();
+            this.tableAdapterManager = new DB_User.db.DS_UserTableAdapters.TableAdapterManager();
             f_NameLabel = new System.Windows.Forms.Label();
             l_NameLabel = new System.Windows.Forms.Label();
             cardLabel = new System.Windows.Forms.Label();
@@ -111,21 +111,21 @@
             // 
             // panel1
             // 
-            this.panel1.Location = new System.Drawing.Point(0, 520);
-            this.panel1.Size = new System.Drawing.Size(1024, 90);
+            this.panel1.Location = new System.Drawing.Point(0, 512);
+            this.panel1.Size = new System.Drawing.Size(1032, 90);
             // 
             // cmdSave
             // 
-            this.cmdSave.Location = new System.Drawing.Point(874, 0);
+            this.cmdSave.Location = new System.Drawing.Point(882, 0);
             this.cmdSave.Click += new System.EventHandler(this.cmdSave_Click);
             // 
             // cmdExit
             // 
-            this.cmdExit.Location = new System.Drawing.Point(950, 0);
+            this.cmdExit.Location = new System.Drawing.Point(958, 0);
             // 
             // panel2
             // 
-            this.panel2.Size = new System.Drawing.Size(1024, 50);
+            this.panel2.Size = new System.Drawing.Size(1032, 50);
             // 
             // f_NameLabel
             // 
@@ -245,16 +245,6 @@
             this.tblEmpBindingSource.DataMember = "tblEmp";
             this.tblEmpBindingSource.DataSource = this.dS_User;
             // 
-            // tblEmpTableAdapter
-            // 
-            this.tblEmpTableAdapter.ClearBeforeFill = true;
-            // 
-            // tableAdapterManager
-            // 
-            this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
-            this.tableAdapterManager.tblEmpTableAdapter = this.tblEmpTableAdapter;
-            this.tableAdapterManager.UpdateOrder = DB_User.db.DS_UserTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
-            // 
             // f_NameTextBox
             // 
             this.f_NameTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.tblEmpBindingSource, "F_Name", true));
@@ -340,13 +330,13 @@
             // pictureTextBox
             // 
             this.pictureTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.tblEmpBindingSource, "Picture", true));
+            this.pictureTextBox.Directory = "Files\\Pic";
             this.pictureTextBox.Image = null;
             this.pictureTextBox.ImageButton = ((System.Drawing.Image)(resources.GetObject("pictureTextBox.ImageButton")));
             this.pictureTextBox.Location = new System.Drawing.Point(625, 135);
             this.pictureTextBox.Name = "pictureTextBox";
             this.pictureTextBox.Size = new System.Drawing.Size(387, 325);
             this.pictureTextBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.pictureTextBox.SubDirectory = null;
             this.pictureTextBox.TabIndex = 93;
             // 
             // adminCheckBox
@@ -358,11 +348,21 @@
             this.adminCheckBox.TabIndex = 94;
             this.adminCheckBox.UseVisualStyleBackColor = true;
             // 
+            // tblEmpTableAdapter
+            // 
+            this.tblEmpTableAdapter.ClearBeforeFill = true;
+            // 
+            // tableAdapterManager
+            // 
+            this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
+            this.tableAdapterManager.tblEmpTableAdapter = this.tblEmpTableAdapter;
+            this.tableAdapterManager.UpdateOrder = DB_User.db.DS_UserTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
+            // 
             // frmEmpDetail
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1024, 610);
+            this.ClientSize = new System.Drawing.Size(1032, 602);
             this.Controls.Add(adminLabel);
             this.Controls.Add(this.adminCheckBox);
             this.Controls.Add(pictureLabel);
@@ -435,8 +435,6 @@
 
         private db.DS_User dS_User;
         private System.Windows.Forms.BindingSource tblEmpBindingSource;
-        private db.DS_UserTableAdapters.tblEmpTableAdapter tblEmpTableAdapter;
-        private db.DS_UserTableAdapters.TableAdapterManager tableAdapterManager;
         private System.Windows.Forms.TextBox f_NameTextBox;
         private System.Windows.Forms.TextBox l_NameTextBox;
         private System.Windows.Forms.TextBox cardTextBox;
@@ -448,5 +446,7 @@
         private System.Windows.Forms.TextBox stetusTextBox;
         private TORServices.Forms.Forms.PictureboxOpenPath pictureTextBox;
         private System.Windows.Forms.CheckBox adminCheckBox;
+        private db.DS_UserTableAdapters.tblEmpTableAdapter tblEmpTableAdapter;
+        private db.DS_UserTableAdapters.TableAdapterManager tableAdapterManager;
     }
 }

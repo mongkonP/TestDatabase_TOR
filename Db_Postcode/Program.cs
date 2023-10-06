@@ -1,11 +1,11 @@
-﻿using DB_Student.frm;
+﻿using Db_Postcode.frm;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace DB_Student
+namespace Db_Postcode
 {
     internal static class Program
     {
