@@ -25,6 +25,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DB_Customer", "DB_Customer\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Db_Postcode", "Db_Postcode\Db_Postcode.csproj", "{A2A33CCC-B7B9-478C-AD1A-853BC5CBC754}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ChemAtom", "ChemAtom\ChemAtom.csproj", "{DEFD1C08-5D25-4BA3-9133-B90CE4614CB6}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -75,6 +77,10 @@ Global
 		{A2A33CCC-B7B9-478C-AD1A-853BC5CBC754}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A2A33CCC-B7B9-478C-AD1A-853BC5CBC754}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A2A33CCC-B7B9-478C-AD1A-853BC5CBC754}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DEFD1C08-5D25-4BA3-9133-B90CE4614CB6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DEFD1C08-5D25-4BA3-9133-B90CE4614CB6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DEFD1C08-5D25-4BA3-9133-B90CE4614CB6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DEFD1C08-5D25-4BA3-9133-B90CE4614CB6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
